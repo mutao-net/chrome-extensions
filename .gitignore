@@ -55,4 +55,54 @@ build-iPhoneSimulator/
 # Used by RuboCop. Remote config files pulled in from inherit_from directive.
 # .rubocop-https?--*
 
+#-------------------------------------------------------
+# Chrome Extensions Project Specific
+#-------------------------------------------------------
+
+# Node.js dependencies - ignore in all directories
 node_modules/
+*/node_modules/
+**/node_modules/
+
+# Chrome Extension build output
+dist/
+*/dist/
+**/dist/
+
+# Temporary files that might be created during development
+*.log
+*.tmp
+*.temp
+.cache/
+*/.cache/
+**/.cache/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+*/.env*
+**/.env*
+
+# OS specific files
+.DS_Store
+Thumbs.db
+.directory
+*/.DS_Store
+**/Thumbs.db
+**/.directory
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*/.idea/
+*/.vscode/
+**/.idea/
+**/.vscode/
