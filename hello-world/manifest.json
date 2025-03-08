@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Ruby Chrome Extension Hello World",
+  "version": "0.0.1",
+  "description": "A simple Chrome extension written in Ruby",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://www.example.com/*"],
+      "js": ["node_modules/unloosen-ruby-loader/dist/entry/loader-content-script.esm.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "*",
+        "node_modules/unloosen-ruby-loader/dist/**"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+} 
